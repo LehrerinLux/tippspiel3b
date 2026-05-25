@@ -1,0 +1,29 @@
+name: Linting
+
+on:
+  push:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'latest'
+
+      - name: Install HTMLHint
+        run: npm install -g htmlhint
+
+      - name: Install Stylelint
+        run: npm install stylelint stylelint-config-standard --save-dev
+
+      - name: Run HTMLHint
+        run: htmlhint '**/*.html'
+
+      - name: Run Stylelint
+        run: npx stylelint '**/*.css'

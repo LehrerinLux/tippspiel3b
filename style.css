@@ -1,0 +1,204 @@
+body {
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.body-contact {
+  color: black;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #F0F0F0;
+}
+
+.nav {
+  background-color: cadetblue;
+  color: white;
+}
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 0;
+}
+
+.nav ul li {
+  padding: 16px;
+  text-align: center;
+  font-size: 1.2rem;
+  border-bottom: 1px solid black;
+  transition: background-color 0.2s;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav ul li:hover {
+  background-color: black;
+}
+
+.nav ul li a:hover {
+  color: white;
+}
+
+.points-table table {
+  width: 80%;
+  padding: 0 16px;
+}
+
+.points-table table, tr, td {
+  padding: 10px 16px;
+}
+
+.single-service {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.single-service p {
+  padding: 0 16px;
+}
+
+.schedule-table table {
+  width: 80%;
+}
+
+.schedule-table table td p {
+  font-weight: bold;
+}
+
+.schedule-table table thead {
+  font-size: 1.5rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+.schedule-table table tr:nth-child(even) {
+  background-color: #f2f2f2; /* Light gray for even rows */
+}
+
+.schedule-table table td:first-child {
+  width: 100px;
+  min-width: 100px;
+  max-width: 100px;
+}
+
+table tbody {
+    transition: all 0.3s ease;
+}
+
+.image-area {
+  background-image:url('images/background.png');
+  background-color:black;
+  background-position: center center;
+  background-size: cover;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.centered-text-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.centered-container {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.headline {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.headline-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.download-button button {
+  padding: 10px 20px;
+  background-color: cadetblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.download-button button:hover {
+  background-color: darkcyan;
+}
+
+.image-text {
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-size: 2.5rem;
+}
+
+.intro-text {
+  color: gray;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.contact {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+}
+
+.contact h1, h2 {
+  text-align: center;
+}
+
+.contact form {
+  margin-top: 20px;
+}
+
+.contact label, input, textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.contact input[type="submit"] {
+  width: auto;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+@media screen and (width >= 700px) {
+  .nav ul {
+    text-align: right;
+  }
+
+  .nav ul li {
+    display: inline-block;
+    border-bottom: 0;
+    border-left: 1px solid black;
+    text-align: left;
+  }
+
+  .single-service-home {
+    width: 50%;
+    float: left;
+  }
+}
