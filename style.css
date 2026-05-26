@@ -1,204 +1,300 @@
+/* =========================================
+   Modern Theme Variables
+   ========================================= */
+:root {
+  --primary-color: #005f73;    /* Deep modern teal */
+  --secondary-color: #0a9396;  /* Lighter teal */
+  --accent-color: #e9d8a6;     /* Subtle highlight */
+  --bg-color: #f4f7f6;         /* Soft off-white background */
+  --text-color: #2b2d42;       /* Dark grey for better readability */
+  --card-bg: #ffffff;
+  --border-radius: 12px;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* =========================================
+   Reset & Base Styles
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: white;
-  color: black;
-  font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 0;
-  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
 }
 
-.body-contact {
-  color: black;
-  font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 0;
-  margin: 0;
-  background-color: #F0F0F0;
+a {
+  text-decoration: none;
 }
 
+/* =========================================
+   Navigation Bar
+   ========================================= */
 .nav {
-  background-color: cadetblue;
-  color: white;
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .nav ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  font-size: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows wrapping on very small screens */
+  gap: 2rem;
 }
 
-.nav ul li {
-  padding: 16px;
-  text-align: center;
-  font-size: 1.2rem;
-  border-bottom: 1px solid black;
-  transition: background-color 0.2s;
-}
-
-.nav ul li a {
-  text-decoration: none;
-  color: black;
-}
-
-.nav ul li:hover {
-  background-color: black;
-}
-
-.nav ul li a:hover {
+.nav a {
   color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
 }
 
-.points-table table {
-  width: 80%;
-  padding: 0 16px;
+.nav a:hover {
+  color: var(--accent-color);
 }
 
-.points-table table, tr, td {
-  padding: 10px 16px;
-}
-
-.single-service {
-  text-align: center;
-  margin-bottom: 32px;
-}
-
-.single-service p {
-  padding: 0 16px;
-}
-
-.schedule-table table {
-  width: 80%;
-}
-
-.schedule-table table td p {
-  font-weight: bold;
-}
-
-.schedule-table table thead {
-  font-size: 1.5rem;
-  text-align: left;
-  font-weight: bold;
-}
-
-.schedule-table table tr:nth-child(even) {
-  background-color: #f2f2f2; /* Light gray for even rows */
-}
-
-.schedule-table table td:first-child {
-  width: 100px;
-  min-width: 100px;
-  max-width: 100px;
-}
-
-table tbody {
-    transition: all 0.3s ease;
-}
-
-.image-area {
-  background-image:url('images/background.png');
-  background-color:black;
-  background-position: center center;
-  background-size: cover;
-  padding-top: 200px;
-  padding-bottom: 200px;
-}
-
-.centered-text-container {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 0 16px;
+/* =========================================
+   Layout Containers
+   ========================================= */
+.wrapper {
+  min-height: 100vh;
 }
 
 .centered-container {
-  max-width: 1020px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 2rem 1rem;
 }
 
-.headline {
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
-.headline-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.download-button button {
-  padding: 10px 20px;
-  background-color: cadetblue;
+/* =========================================
+   Hero Section (Image Area)
+   ========================================= */
+.image-area {
+  /* Replace the gradient with your image */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/background.png');
+  background-size: cover;       /* Ensures the image fills the whole banner */
+  background-position: center;  /* Keeps the best part of the image in the middle */
+  background-repeat: no-repeat; /* Stops the image from tiling */
+  
+  padding: 4rem 1rem;
+  text-align: center;
   color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.download-button button:hover {
-  background-color: darkcyan;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
 }
 
 .image-text {
-  text-align: center;
-  background-color: black;
-  color: white;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .intro-text {
-  color: gray;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
   text-align: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  color: var(--primary-color);
+  margin-bottom: -1rem;
 }
 
-.contact {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+/* =========================================
+   Services (Cards on Startseite)
+   ========================================= */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
-.contact h1, h2 {
+.single-service {
+  background-color: var(--card-bg);
+  padding: 2.5rem 1.5rem;
+  border-radius: var(--border-radius);
   text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contact form {
-  margin-top: 20px;
+.single-service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-.contact label, input, textarea {
-  display: block;
+.single-service img {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.single-service:hover img {
+  transform: scale(1.1);
+}
+
+.single-service p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+/* =========================================
+   Spielplan (Schedule Table)
+   ========================================= */
+.headline-container .headline {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.schedule-table h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--secondary-color);
+}
+
+/* Table Wrapper for Mobile Scrolling */
+.schedule-table {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow-x: auto; /* Crucial for mobile tables! */
+}
+
+table {
   width: 100%;
-  margin-bottom: 10px;
+  border-collapse: collapse;
+  min-width: 700px; /* Forces horizontal scroll on phones instead of breaking layout */
 }
 
-.contact input[type="submit"] {
-  width: auto;
-  margin-top: 10px;
-  cursor: pointer;
+th, td {
+  padding: 1rem;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1px solid #e2e8f0;
 }
 
-@media screen and (width >= 700px) {
+th {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* First and last child border radius for the table header */
+th:first-child { border-top-left-radius: 8px; }
+th:last-child { border-top-right-radius: 8px; }
+
+tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+tr:hover {
+  background-color: #f1f5f9;
+}
+
+td img {
+  width: 40px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.points {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  width: 50px;
+}
+
+/* =========================================
+   Contact Page
+   ========================================= */
+
+/* Make sure the page takes up the full screen height */
+.body-contact {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Allow the main container to grow and fill the space below the nav */
+.contact-main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Center the actual contact content perfectly in the middle */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Add a bit of modern styling to Frau Lux's details */
+.contact h1 {
+  color: var(--primary-color);
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact h2 {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+/* Keep the QR code a nice, readable size and give it soft edges */
+.contact img {
+  max-width: 200px;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+/* Slight zoom effect when someone hovers over the QR code */
+.contact img:hover {
+  transform: scale(1.05);
+}
+
+/* =========================================
+   Mobile Responsiveness (Media Queries)
+   ========================================= */
+@media screen and (max-width: 768px) {
+  .image-text {
+    font-size: 2rem;
+  }
+  
+  .headline-container .headline {
+    font-size: 1.8rem;
+  }
+
   .nav ul {
-    text-align: right;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
-
-  .nav ul li {
-    display: inline-block;
-    border-bottom: 0;
-    border-left: 1px solid black;
-    text-align: left;
-  }
-
-  .single-service-home {
-    width: 50%;
-    float: left;
+  
+  .single-service {
+    padding: 1.5rem;
   }
 }
