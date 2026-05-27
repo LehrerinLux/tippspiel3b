@@ -18,12 +18,47 @@
         </ul>
     </div>
     <div class="headline-container centered-container">
-        <div class="headline">Work - in - Progress!</div>
+        <div class="headline">⚽ Unser WM Tippspiel ⚽</div>
     </div>
-    
-    <br><br><br>
-    <div class="points-table">
+
+    <!-- SECTION 1: THE LEADERBOARD -->
+    <div class="centered-container">
+        <div class="rangliste">
+            <h2>🏆 Die Tabelle</h2>
+            
+            <div id="leaderboard-container">
+                <p style="text-align:center;">Lade Punktestand...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 2: HOW THEY VOTED ON A FINISHED GAME -->
+    <div class="points-table centered-container">
+        <h2>Wie gibts die Punkte?</h2>
+        
+        <div class="echtes-ergebnis">
+            Beispiel Ergebnis: 2 - 0
+        </div>
+
+        <!-- 3 Points Example -->
+        <div class="tipp-karte volltreffer">
+            <span><strong>Korrekt getippt:</strong> Tippte 2 - 0</span>
+            <span>🎯 3 Punkte</span>
+        </div>
+
+        <!-- 1 Point Example -->
+        <div class="tipp-karte richtiger-sieger">
+            <span><strong>Richtigen Sieger getippt:</strong> Tippte 3 - 1</span>
+            <span>👍 1 Punkt</span>
+        </div>
+
+        <!-- 0 Points Example -->
+        <div class="tipp-karte daneben">
+            <span><strong>Leider falsch getippt</strong> Tippte 0 - 1</span>
+            <span>⚽ 0 Punkte</span>
+        </div>
         
     </div>
+    <script src="../scripts/fill-points-table.js"></script>
 </body>
 </html>
