@@ -2,11 +2,11 @@
    Modern Theme Variables
    ========================================= */
 :root {
-  --primary-color: #005f73;    /* Deep modern teal */
-  --secondary-color: #0a9396;  /* Lighter teal */
-  --accent-color: #e9d8a6;     /* Subtle highlight */
-  --bg-color: #f4f7f6;         /* Soft off-white background */
-  --text-color: #2b2d42;       /* Dark grey for better readability */
+  --primary-color: #005f73;
+  --secondary-color: #0a9396;
+  --accent-color: #e9d8a6;
+  --bg-color: #f4f7f6;
+  --text-color: #2b2d42;
   --card-bg: #ffffff;
   --border-radius: 12px;
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -80,11 +80,10 @@ a {
    Hero Section (Image Area)
    ========================================= */
 .image-area {
-  /* Replace the gradient with your image */
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/background.png');
-  background-size: cover;       /* Ensures the image fills the whole banner */
-  background-position: center;  /* Keeps the best part of the image in the middle */
-  background-repeat: no-repeat; /* Stops the image from tiling */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   
   padding: 4rem 1rem;
   text-align: center;
@@ -170,7 +169,7 @@ a {
   padding: 1.5rem;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
-  overflow-x: auto; /* Crucial for mobile tables! */
+  overflow-x: auto;
 }
 
 table {
@@ -193,7 +192,6 @@ th {
   letter-spacing: 0.5px;
 }
 
-/* First and last child border radius for the table header */
 th:first-child { border-top-left-radius: 8px; }
 th:last-child { border-top-right-radius: 8px; }
 
@@ -223,21 +221,18 @@ td img {
    Contact Page
    ========================================= */
 
-/* Make sure the page takes up the full screen height */
 .body-contact {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* Allow the main container to grow and fill the space below the nav */
 .contact-main {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
-/* Center the actual contact content perfectly in the middle */
 .contact {
   display: flex;
   flex-direction: column;
@@ -248,7 +243,6 @@ td img {
   text-align: center;
 }
 
-/* Add a bit of modern styling to Frau Lux's details */
 .contact h1 {
   color: var(--primary-color);
   font-size: 3rem;
@@ -262,7 +256,6 @@ td img {
   margin-bottom: 2rem;
 }
 
-/* Keep the QR code a nice, readable size and give it soft edges */
 .contact img {
   max-width: 200px;
   height: auto;
@@ -271,10 +264,100 @@ td img {
   transition: transform 0.3s ease;
 }
 
-/* Slight zoom effect when someone hovers over the QR code */
 .contact img:hover {
-  transform: scale(1.05);
+  transform: scale(1.9);
 }
+
+/* =========================================
+   Points Page (Leaderboard)
+   ========================================= */
+   
+.rangliste {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+.rangliste h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.kind-reihe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-color);
+  transition: background-color 0.2s ease;
+}
+
+.kind-reihe:hover {
+  background-color: #f8fafc;
+}
+
+.kind-reihe:last-child {
+  border-bottom: none;
+}
+
+.punkte-badge {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.points-table {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+.spiel-auswertung {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.echtes-ergebnis {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #2ecc71;
+    color: white;
+    border-radius: 10px;
+}
+
+.tipp-karte {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+
+.volltreffer { background-color: #d4edda; border: 2px solid #28a745; }
+.richtiger-sieger { background-color: #cce5ff; border: 2px solid #007bff; }
+.daneben { background-color: #f8f9fa; border: 2px solid #ced4da; }
 
 /* =========================================
    Mobile Responsiveness (Media Queries)
@@ -296,5 +379,11 @@ td img {
   
   .single-service {
     padding: 1.5rem;
+  }
+
+  .tipp-karte {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
   }
 }
